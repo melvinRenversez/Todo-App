@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 h1 {
@@ -82,6 +83,20 @@ form {
     font-weight: 600;
     color: var(--background);
     cursor: pointer;
+}
+
+#todo-list {
+    height: calc(100vh - 220px);
+    overflow-y: scroll;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
 }
 
 .todo {
@@ -170,5 +185,9 @@ input[type="checkbox"] {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+    #todo-list {
+        height: calc(100vh - 350px);
+        overflow-y: scroll;
     }
 }
